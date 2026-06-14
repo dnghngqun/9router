@@ -27,7 +27,7 @@ const URL_PATTERNS = {
   antigravity: [":generateContent", ":streamGenerateContent"],
   copilot: ["/chat/completions", "/v1/messages", "/responses"],
   kiro: ["/generateAssistantResponse"],
-  cursor: ["/BidiAppend", "/RunSSE", "/RunPoll", "/Run"],
+  cursor: ["/BidiAppend", "/RunSSE", "/RunPoll", "/Run", "/user", "/subscription", "/check_pro"],
 };
 
 // Synonym map: rawModel from request → canonical alias key in mitmAlias DB

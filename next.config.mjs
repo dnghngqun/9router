@@ -45,6 +45,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/user",
+        destination: "/api/cursor/user"
+      },
+      {
+        source: "/subscription",
+        destination: "/api/cursor/subscription"
+      },
+      {
         source: "/v1/v1/:path*",
         destination: "/api/v1/:path*"
       },

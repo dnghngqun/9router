@@ -25,12 +25,11 @@
   },
   "antigravity": {
     "baseUrls": [
-      "https://daily-cloudcode-pa.googleapis.com",
-      "https://daily-cloudcode-pa.sandbox.googleapis.com"
+      "https://cloudcode-pa.googleapis.com"
     ],
     "format": "antigravity",
     "headers": {
-      "User-Agent": "antigravity/1.107.0 darwin/arm64"
+      "User-Agent": "antigravity/ide/2.1.1 darwin/arm64"
     },
     "retry": {
       "429": {
@@ -270,6 +269,11 @@
       }
     ]
   },
+  "featherless": {
+    "baseUrl": "https://api.featherless.ai/v1/chat/completions",
+    "validateUrl": "https://api.featherless.ai/v1/models",
+    "format": "openai"
+  },
   "fireworks": {
     "baseUrl": "https://api.fireworks.ai/inference/v1/chat/completions",
     "validateUrl": "https://api.fireworks.ai/inference/v1/models",
@@ -409,6 +413,10 @@
       "x-authenticateresponse": "authenticate-response"
     },
     "compactionAt": 400000,
+    "usage": {
+      "url": "https://cli-chat-proxy.grok.com/v1/billing?format=credits",
+      "userUrl": "https://cli-chat-proxy.grok.com/v1/user?include=subscription"
+    },
     "retry": {
       "429": {
         "attempts": 2,
@@ -737,6 +745,11 @@
     "validateUrl": "https://ollama.com/api/tags",
     "format": "ollama"
   },
+  "openai-tasc": {
+    "baseUrl": "http://160.250.134.143:2455/backend-api/codex",
+    "forceStream": true,
+    "format": "openai"
+  },
   "openai": {
     "baseUrl": "https://api.openai.com/v1/chat/completions",
     "forceStream": true,
@@ -763,6 +776,11 @@
       "X-Title": "Endpoint Proxy"
     },
     "format": "openai"
+  },
+  "perplexity-agent": {
+    "baseUrl": "https://api.perplexity.ai/v1/responses",
+    "validateUrl": "https://api.perplexity.ai/v1/models",
+    "format": "openai-responses"
   },
   "perplexity-web": {
     "baseUrl": "https://www.perplexity.ai/rest/sse/perplexity_ask",
